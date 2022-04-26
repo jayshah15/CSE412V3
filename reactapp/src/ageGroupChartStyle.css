@@ -1,0 +1,20 @@
+#d3Vis {
+    margin: auto;
+    width: 80vw;  
+    height: 80vh;
+}
+
+#dropDownDiv {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    text-align: center;
+
+}
+
+svg {
+  border:1px solid gray;
+  border-radius:10px;
+  height:80vh;
+  width:80vw;
+  margin:5px;
+}
