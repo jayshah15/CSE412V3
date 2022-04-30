@@ -14,12 +14,7 @@
 svg {
   border:1px solid gray;
   border-radius:10px;
-  height:70vh;
-  width:60vw;
+  height:80vh;
+  width:80vw;
   margin:5px;
 }
-
-.legend rect {
-  fill:white;
-  stroke:black;
-  opacity:0.8; }

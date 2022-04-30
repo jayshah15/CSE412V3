@@ -3,7 +3,8 @@ import * as d3 from 'd3';
 import './dispHospitalizationChart.css';
 import AsyncSelect from 'react-select/async';
 import  {datas} from './uniqueHospData';
- 
+import {nest, filter, transition } from 'd3';
+
 
 const LineChart = () => {
 
@@ -36,7 +37,7 @@ const LineChart = () => {
                 })
                 //console.log(entities);
                 const dates = [...new Set(entities.map(each => [each.date.slice(0, 10), each.value]))]
-                // console.log(dates);
+                 //console.log(dates);
 
                 let CountsByDate = []
                 dates.map(time => {
@@ -46,9 +47,8 @@ const LineChart = () => {
 
                     const counts = { date: parseDate(date), value:value}
                     CountsByDate.push(counts);
-                    //console.log(CountsByDate);
                 })
-
+                //console.log(CountsByDate);
                 d3.selectAll("svg > *").remove();
 
                 const margin = {top : 50, right : 30, bottom : 30, left : 30}

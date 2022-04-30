@@ -5,7 +5,7 @@ const db = require('../db')
 
 router.get('/', (req,res) =>{
 
-    db.any("SELECT  vaccine, SUM(total_vaccinations) FROM vaccinations_by_manufacturer GROUP BY vaccine;")
+    db.any("SELECT  date,vaccine, total_vaccinations FROM vaccinations_by_manufacturer;")
     .then(rows => {
 
         res.json(rows)
