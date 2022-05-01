@@ -106,7 +106,7 @@ const PieChart = () => {
              .attr('text-anchor','middle')
              .attr('font-size', '20px')
              .attr('stroke', 'blue')
-             .text('bar chart for different age group who are fully vaccinated per hundred')
+             .text('pie chart for different age group who are fully vaccinated per hundred')
              
             //         var legends =  svg.append("g").attr("transform", "translate(" + width / 4 + "," + height / 4 + ")")
             //                     .selectAll(".legends").data(data);
@@ -139,7 +139,7 @@ const PieChart = () => {
     }, [])
     return (
         <><div id="dropDownDiv">
-  <h3>This visualization shows a bar chart of  people fully vaccinated per hundred.<br></br>
+  <h3>This visualization shows a pie chart of  people fully vaccinated per hundred.<br></br>
             It shows data for 41 different age groups from 2020-2022.
             </h3>
         </div>

@@ -111,7 +111,7 @@ const PieChart = () => {
              .attr('text-anchor','middle')
              .attr('font-size', '20px')
              .attr('stroke', 'blue')
-             .text('bar chart for total vaccinations by different vaccine providers.')
+             .text('pie chart for total vaccinations by different vaccine providers.')
              
      
             })
@@ -119,7 +119,7 @@ const PieChart = () => {
     }, [])
     return (
         <><div id="dropDownDiv">
-  <h3>This visualization shows bar chart for different vaccines providers and how many people<br></br>
+  <h3>This visualization shows pie chart for different vaccines providers and how many people<br></br>
            have been vaccinated from their vaccine (From 2020).
             </h3>
         </div>
