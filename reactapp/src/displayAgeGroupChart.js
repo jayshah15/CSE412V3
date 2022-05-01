@@ -21,7 +21,7 @@ const PieChart = () => {
 
             data => {
                 data = getAgeGroupData(data);
-                //console.log(data);
+                console.log(data);
                 d3.selectAll("svg > *").remove();
                 
                 const margin = {top : 50, right : 30, bottom : 30, left : 30}
@@ -70,9 +70,9 @@ const PieChart = () => {
                                 var c = 2;   // number of columns
                                 var h = 20;  // height of each entry
                                 var w = 150; // width of each entry (so you can position the next column)
-                                var tx = 10; // tx/ty are essentially margin values
-                                var ty = 10;
-                                var x = i % c * w + tx;
+                                var tx = 20; // tx/ty are essentially margin values
+                                var ty = 40;
+                                var x = i % c * (w+10) + tx+10;
                                 var y = Math.floor(i / c) * h + ty;
                                 return "translate(" + x + "," + y + ")";
                              })
@@ -97,7 +97,9 @@ const PieChart = () => {
              .attr("x", 24)
              .attr("y", 9)
              .attr("dy", ".35em")
-             .text(function(d) { return d.name; });
+             .text(function(d) { 
+                 const s = (Math.round(d.value * 100) / 100).toFixed(1)
+                return d.name + "(" + s + ")"; });
 
 
              g.append('text') 
